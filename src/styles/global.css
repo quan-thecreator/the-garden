@@ -21,7 +21,7 @@ body {
   @apply font-sans antialiased;
   @apply flex flex-col;
   @apply bg-neutral-100 dark:bg-neutral-900;
-  @apply text-black/75 dark:text-white/75;
+  @apply text-black/75 dark:text-[#20C20E]/75;
 }
 
 header {
@@ -39,20 +39,23 @@ footer {
 }
 
 article {
-  @apply prose prose-neutral max-w-full dark:prose-invert prose-img:mx-auto prose-img:my-auto;
+  @apply prose prose-neutral max-w-full prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-semibold;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+  @apply prose-headings:text-black prose-headings:dark:text-[#20C20E];
 }
+  .dark .prose {
+    --tw-prose-body: #20C20E; /* Text color */
+  }
 
 @layer utilities {
   article a {
     @apply font-sans text-current underline underline-offset-[3px];
-    @apply decoration-black/30 dark:decoration-white/30;
+    @apply decoration-black/30 dark:decoration-[#20C20E]/30;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/50 dark:decoration-white/50;
+    @apply text-black dark:text-[#20C20E];
+    @apply decoration-black/50 dark:decoration-[#20C20E]/50;
   }
 }
 
